@@ -1,0 +1,14 @@
+info:
+  name: dragonball
+  type: http
+
+http:
+  method: GET
+  url: https://dragonball-api.com/api/characters
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
