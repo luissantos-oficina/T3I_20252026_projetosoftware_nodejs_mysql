@@ -7,13 +7,27 @@ const app = express();
 const port = 3000;
 app.use(express.json());
 
+
+
+
+
 // Conexão com o banco de dados
+// ter em conta o docker se estiver a utilizar as imagens / containers
 const db = mysql.createPool({
     host: 'localhost',
     user: 'root', // Altere conforme necessário
     password: '', // Altere conforme necessário
     database: 'ipo'
 });
+
+
+
+
+
+
+
+
+
 
 // Rota para verificar se está ok !
 app.post('/', async (req, res) => {
@@ -23,6 +37,12 @@ app.post('/', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+
+
+
+
+
+
 
 
 // Rota para obter todas as marcas
@@ -82,7 +102,12 @@ app.post('/marca/eliminar/:cod', async (req, res) => {
 
 
 
-// Rota para obter 100 clientes ordenados por nome
+
+
+
+
+
+// Rota para obter X:limit clientes a partir de Y:ofsset regitos ordenados por nome aSC
 app.get('/clientes/:offset/:limit', async (req, res) => {
     try {
         const [rows] = 
@@ -120,9 +145,17 @@ app.post('/cliente/eliminar/:cod', async (req, res) => {
     }
 });
 
+
+
+
+
+
 // Inicia o servidor
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
 
 // node app.js
+
+
+
