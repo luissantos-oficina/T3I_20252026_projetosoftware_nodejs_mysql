@@ -2,7 +2,7 @@
 Projeto de Software, utilizando NodeJS, MySQL
 
 ### Instalação
-
+1. docker-compose up -d
 2. Execute `npm install`.
 3. Inicie a API com `node app.js`.
 
