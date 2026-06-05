@@ -14,3 +14,4 @@ Ctrl + C
 http://localhost:3001/marcas/ # listar marcas
 http://localhost:3001/clientes/0/50 # busrcar os primeiros 50 clientes
 
+
